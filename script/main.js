@@ -1,7 +1,18 @@
+Vue.component("modal", {
+    template: "#modal-template",
+    methods: {
+        close(event) {
+            this.$emit('close');
+        },
+    },
+});
+
 var app = new Vue({
     el: "#app",
     data: {
         num: null,
+        showSignUp: false,
+        showLogIn: false,
     },
     computed: {
         countKg: function () {
@@ -30,6 +41,12 @@ var app = new Vue({
         },
         minus: function () {
             this.num--;
+        },
+        showModal() {
+            this.showSignUp = true;
+        },
+        closeModal() {
+            this.showSignUp = false;
         }
     }
 });

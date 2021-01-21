@@ -41,6 +41,7 @@ body {
 .menu__item {
     text-decoration: none;
     margin: 0 10px;
+    border: 0;
     font-weight: 500;
 }
 
@@ -360,7 +361,7 @@ body {
 
 /*СЛАЙДЕР */
 
-.slider{
+.slider {
     margin: 30px 0px;
     width: 800px;
     margin: 0 auto;
@@ -369,7 +370,7 @@ body {
     overflow: hidden;
 }
 
-.slider__title{
+.slider__title {
     text-align: center;
     font-weight: 300;
     margin: 10px 0px;
@@ -378,13 +379,13 @@ body {
     color: #292b2c;
 }
 
-.slides{
+.slides {
     width: 500%;
     height: 500px;
     display: flex;
 }
 
-.slides input{
+.slides input {
     display: none;
 }
 
@@ -393,16 +394,16 @@ body {
     transition: 2s;
 }
 
-.slide img{
+.slide img {
     width: 200px;
     height: 200px;
 }
 
-.slide__img{
+.slide__img {
     width: 400px;
 }
 
-.navigation-manual{
+.navigation-manual {
     position: absolute;
     width: 800px;
     margin-top: -40px;
@@ -410,7 +411,7 @@ body {
     justify-content: center;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid rgb(255, 226, 0);
     padding: 5px;
     border-radius: 10px;
@@ -418,33 +419,35 @@ body {
     transition: 1s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
-    background-color:rgb(255, 226, 0);
+.manual-btn:hover {
+    background-color: rgb(255, 226, 0);
 }
 
-#radio1:checked ~ .first{
+#radio1:checked ~ .first {
     margin-left: 0;
     transition: 2s;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked ~ .first {
     margin-left: -20%;
     transition: 2s;
 }
-#radio3:checked ~ .first{
+
+#radio3:checked ~ .first {
     margin-left: -40%;
     transition: 2s;
 }
-#radio4:checked ~ .first{
+
+#radio4:checked ~ .first {
     margin-left: -60%;
     transition: 2s;
 }
 
-.navigation-auto{
+.navigation-auto {
     position: absolute;
     display: flex;
     width: 800px;
@@ -452,26 +455,156 @@ body {
     margin-top: 460px;
 }
 
-.navigation-auto div{
+.navigation-auto div {
     border: 2px solid rgb(255, 226, 0);
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color:rgb(255, 226, 0); 
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: rgb(255, 226, 0);
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color:rgb(255, 226, 0); 
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: rgb(255, 226, 0);
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color:rgb(255, 226, 0); 
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: rgb(255, 226, 0);
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color:rgb(255, 226, 0); 
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: rgb(255, 226, 0);
+}
+
+.modal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: table;
+    transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.modal-container {
+    width: 400px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    transition: all 0.3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal_header_item_stand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-default-button {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+/*
+* The following styles are auto-applied to elements with
+* transition="modal" when their visibility is toggled
+* by Vue.js.
+*
+* You can easily play with the modal transition by editing
+* these styles.
+*/
+
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-leave-active {
+    opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.modal_header_item {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.modal_header_item h6 {
+    margin-bottom: 0;
+}
+
+.modal-body span {
+    display: block;
+    height: 60px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 60px;
+    color: #666;
+    text-align: center;
+}
+
+.modal-body input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.modal_header_item_pic {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.modal-footer-stand a {
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+.modal-footer-stand {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: .75rem;
 }
