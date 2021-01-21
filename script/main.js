@@ -12,6 +12,16 @@ var app = new Vue({
         },
         countOunc: function () {
             return this.num * 16;
+        },
+        slide: function () {
+            let counter = 1
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1
+                }
+            }, 4000)
         }
     },
     methods: {
