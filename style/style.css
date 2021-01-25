@@ -24,7 +24,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
 .header__logo {
@@ -35,7 +35,7 @@ body {
 }
 
 .header__menu {
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 .menu__item {
@@ -59,7 +59,7 @@ body {
     font-size: 48px;
     font-weight: 300;
     letter-spacing: 2px;
-    margin: 20px 0px;
+    margin: 20px 0;
 }
 
 .content__text {
@@ -69,7 +69,7 @@ body {
 
 .content__calc {
     display: flex;
-    margin: 50px 0px;
+    margin: 50px 0;
 }
 
 .left__title {
@@ -82,7 +82,7 @@ body {
     width: 500px;
     display: flex;
     background-color: #f5f5f5;
-    margin: 10px 0px;
+    margin: 10px 0;
     padding: 40px 20px;
     justify-content: space-between;
 }
@@ -109,16 +109,16 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .body_up p {
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 0 20px;
     font-size: 12px;
 }
 
 .body_up h2 {
-    padding: 0px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     font-size: 32px;
     font-weight: 300;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .right__body_down__input {
-    margin: 0px 30px 10px 40px;
+    margin: 0 30px 10px 40px;
 }
 
 .right__body_down__input p {
@@ -140,11 +140,11 @@ body {
 
 .right__body_down__result {
     display: flex;
-    padding: 0px 30px 50px 30px;
+    padding: 0 30px 50px 30px;
 }
 
 .right__body_down__result div {
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 .line-beetwen {
@@ -187,7 +187,7 @@ body {
     text-align: center;
     font-size: 48px;
     font-weight: 200;
-    margin: 30px 0px;
+    margin: 30px 0;
     color: #292b2c;
 }
 
@@ -362,9 +362,8 @@ body {
 /*СЛАЙДЕР */
 
 .slider {
-    margin: 30px 0px;
+    margin: 30px auto;
     width: 800px;
-    margin: 0 auto;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
@@ -373,7 +372,7 @@ body {
 .slider__title {
     text-align: center;
     font-weight: 300;
-    margin: 10px 0px;
+    margin: 10px 0;
     letter-spacing: 2px;
     font-size: 48px;
     color: #292b2c;
@@ -501,7 +500,7 @@ body {
 
 .modal-container {
     width: 400px;
-    margin: 0px auto;
+    margin: 0 auto;
     padding: 20px 30px;
     background-color: #fff;
     border-radius: 2px;
@@ -587,6 +586,9 @@ body {
     border: 1px solid grey;
     border-radius: 12px;
     padding: 10px;
+    margin-bottom: 30px;
+}
+.modal-body input:first-child{
     margin-bottom: 20px;
 }
 
