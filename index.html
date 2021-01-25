@@ -55,32 +55,31 @@
             <a href="" class="menu__item">Услуги</a>
             <a href="" class="menu__item">Компания</a>
             <button id="show-modal" @click="showModal" class="menu__item yellow">Регистрация</button>
-            <button id="show-modal" @click="showModal" class="menu__item yellow">Вход</button>
+            <button id="show-modal-second" @click="showLogInModal" class="menu__item yellow">Вход</button>
         </div>
     </header>
     <modal v-show="showSignUp" @close="closeModal"></modal>
-<!--    <modal v-show="showLogIn" @close="closeModal">-->
-<!--        <div slot="body">-->
-<!--            <div class="modal_header_item">-->
-<!--                <img class="modal_header_item_pic" src="assets/img/google-icon.svg" alt="">-->
-<!--                <h6>Log In with Google</h6>-->
-<!--            </div>-->
-<!--            <span>or</span>-->
-<!--            <div class="">-->
-<!--                <input type="text" placeholder="Login">-->
-<!--                <input type="text" placeholder="Password">-->
-<!--                <button class="modal-default-button" @click="close">-->
-<!--                    Log In-->
-<!--                </button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div slot="footer">-->
-<!--            <div class="modal-footer">-->
-<!--                <a href="/">Forgot password?</a>-->
-<!--                <p>No account?</p><a @click="closeLogIn">Sign up</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </modal>-->
+    <modal v-show="showLogIn" @close="closeLogIn">
+        <div slot="body">
+            <div class="modal_header_item">
+                <img class="modal_header_item_pic" src="assets/img/google-icon.svg" alt="">
+                <h6>Sign up with Google</h6>
+            </div>
+            <span>or</span>
+            <form action="auth.php" method="post">
+                <input type="text" name="login" placeholder="Login" required="">
+                <input type="password" name="password" placeholder="Password" required="">
+                <button class="modal-default-button" type="submit" @click="close">
+                    Sign In
+                </button>
+            </form>
+        </div>
+        <div slot="footer">
+            <div class="modal-footer">
+                <a href="/">Forgot password?</a>
+            </div>
+        </div>
+    </modal>
     <div class="content">
         <h2 class="slider__title">НОВИНКИ</h2>
         <div class="slider">

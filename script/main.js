@@ -49,11 +49,9 @@ var app = new Vue({
             this.showSignUp = false;
         },
         showLogInModal(){
-            this.closeModal();
             this.showLogIn = true;
         },
         closeLogIn(){
-            this.showModal();
             this.showLogIn = false;
         }
     }
