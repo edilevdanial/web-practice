@@ -1,4 +1,4 @@
-<?php session_start();
+<?php
 $connection = mysqli_connect('localhost','root','root','practice');  /*хост атауы, учетная запись, пароль, БД-аты */
 $select_db = mysqli_select_db($connection, 'users'); /*practice - таблица атауы*/
 
@@ -9,14 +9,14 @@ if (isset($_POST["login"]) and isset($_POST["password"])){
 	$password = md5($password."ghjsfkld2345");
 	$query = "SELECT * FROM users WHERE login = '$login' and password = '$password'";
 	$rezult = mysqli_query($connection,$query)or die(mysqli_error($connection));
-	$count = mysqli_num_rows($rezult);
+    $count = mysqli_num_rows($rezult);
 	if ($count == 1){
 		$_SESSION['login'] = $login;
         $login = $_SESSION['login'];
-        header('Location: /succses.html');
+        header('Location: /html/success.html');
 	}
 	else{
-		$fsmsg = "Ошибка! Попробуйте заново!";
+        header('Location: /html/notFound.html');
     }
 }
 
