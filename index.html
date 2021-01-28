@@ -131,6 +131,34 @@
             {{slide}}
         </div>
 
+
+        <div class="checkout">
+            <a id = "checkout__href" href="#checkout__main">Оформить заказ</a>
+        </div>
+
+        <div class="checkout__main" id="checkout__main">
+            <a href="#checkout__href" class="checkout__out"></a>
+            <div class="checkout__body">
+                <div class="checkout__content">
+                    <div class="body_header_item">
+                    <h6>Оставить заявку</h6>
+                    <a href="#checkout__href">X</a>
+                    </div>
+                    <form class = "forms" action="/checkout.php" method="post">
+                    <div>
+                        <input type="text" name="name" placeholder="Name" required="">
+                        <input type="text" name="email" placeholder="Email" required="">
+                        <input type="text" name="number" placeholder="Number" required="">
+                        <input type="text" name="theme" placeholder="Theme" required="">
+                        <textarea placeholder = "Your comments"name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <button class="modal-default-button" type="submit">
+                         Оформить
+                    </button>
+                    </form>
+                </div>
+            </div>
+        </div>
         <h1 class="content__title">РАССЧИТАЙТЕ СТОИМОСТЬ</br>ЗАЙМА</h1>
         <p class="content__text">Ломбард ежедневно обновляет расценки для каждой пробы золота.</br>
             По этим расценкам рассчитывается именно сумма займа на руки.</p>

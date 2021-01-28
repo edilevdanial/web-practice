@@ -15,7 +15,6 @@ if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["email"]
 	$query="INSERT INTO users (login, password, email) VALUES ('$login','$password','$email')";
 	$rezult = mysqli_query($connection, $query);
 }
-
 header('Location: /')
 
- ?>
+?>
