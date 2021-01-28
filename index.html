@@ -46,6 +46,7 @@
     </script>
 </head>
 <body>
+
 <div id="app" class="wrapper">
     <header class="header">
         <div class="header__logo">
@@ -144,18 +145,19 @@
                     <h6>Оставить заявку</h6>
                     <a href="#checkout__href">X</a>
                     </div>
-                    <form class = "forms" action="/checkout.php" method="post">
+                    <form method="POST" action ="/checkout.php" class = "forms"  >
                     <div>
                         <input type="text" name="name" placeholder="Name" required="">
                         <input type="text" name="email" placeholder="Email" required="">
                         <input type="text" name="number" placeholder="Number" required="">
                         <input type="text" name="theme" placeholder="Theme" required="">
-                        <textarea placeholder = "Your comments"name="" id="" cols="30" rows="5"></textarea>
+                        
                     </div>
-                    <button class="modal-default-button" type="submit">
+                    <button class="modal-default-button" type="submit" name="submit">
                          Оформить
                     </button>
                     </form>
+                    
                 </div>
             </div>
         </div>
